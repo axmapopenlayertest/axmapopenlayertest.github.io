@@ -1,0 +1,118 @@
+html,
+body,
+#map {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#map {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.ol-popup {
+  position: absolute;
+  min-width: 180px;
+  background-color: white;
+  -webkit-filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.2));
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  bottom: 12px;
+  left: -50px;
+}
+
+.ol-popup:after,
+.ol-popup:before {
+  top: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.ol-popup:after {
+  border-top-color: white;
+  border-width: 10px;
+  left: 48px;
+  margin-left: -10px;
+}
+
+.ol-popup:before {
+  border-top-color: #cccccc;
+  border-width: 11px;
+  left: 48px;
+  margin-left: -11px;
+}
+
+.ol-popup-closer {
+  text-decoration: none;
+  position: absolute;
+  top: 2px;
+  right: 8px;
+}
+
+.ol-popup-closer:after {
+  content: "✖";
+}
+
+.ui-coordinates {
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 10px 10px;
+  color: #fff;
+  font-size: 11px;
+  line-height: 18px;
+  border-radius: 3px;
+  max-height: fit-content;
+  overflow: auto;
+  width: fit-content;
+  z-index: 2;
+}
+
+.menu-selector {
+  cursor: pointer;
+  font: bold 10px "Open Sans", arial, sans-serif;
+  color: #fafafa;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  padding: 5px 5px;
+  position: relative;
+}
+
+.menu-selector2 {
+  cursor: pointer;
+  font: bold 10px "Open Sans", arial, sans-serif;
+  color: #000000;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  padding: 5px 5px;
+  position: relative;
+}
+
+.menu-selector:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fafafa;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.menu-selector:hover:after {
+  width: 100%;
+  left: 0;
+}
